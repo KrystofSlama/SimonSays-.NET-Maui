@@ -5,3 +5,12 @@ Randomly generated color sequences.
 Increasing difficulty as the game progresses.
 Interactive, responsive UI using .NET MAUI controls.
 Cross-platform compatibility (Windows, macOS, Android, iOS).
+
+
+## Screenshot
+<p align="center">
+  <img src="images/Main.png" alt="Main Menu" width="200"/>
+  <img src="images/Game.png" alt="Gameplay" width="200"/>
+  <img src="images/Score.png" alt="Score" width="200"/>
+  <img src="images/Lose.png" alt="Game Over" width="200"/>
+</p>
