@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimonSays.Views.Play">
+   
+    
+    <VerticalStackLayout
+        HorizontalOptions="Fill"
+        VerticalOptions="Fill"
+        BackgroundColor="Beige"
+        >
+        <!-- Score -->
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Margin="0, 0, 0, 0">
+            <Label
+                Text="Score: "
+                Style="{StaticResource PlayLabel}"
+                FontSize="80"
+                />
+            
+            <Label
+                Text="0"
+                Style="{StaticResource PlayLabel}"
+                x:Name="CurrentScore"
+                FontSize="80"
+                />
+        </HorizontalStackLayout>
+        <!-- Count of pressed buttons -->
+        <HorizontalStackLayout
+            HorizontalOptions="Center"
+            Margin="0, 0, 0, 0">
+            <Label
+                Text="Pressed: "
+                Style="{StaticResource PlayLabel}"
+                x:Name="LabelPressed"
+                FontSize="40"
+                IsVisible="False"
+            />
+            
+            <Label
+                Text="0"
+                Style="{StaticResource PlayLabel}"
+                x:Name="CurrentPressedCount"
+                FontSize="40"
+                IsVisible="False"
+            />
+            <Label
+                Text="/"
+                Style="{StaticResource PlayLabel}"
+                x:Name="LabelPressedTwo"
+                FontSize="40"
+                IsVisible="False"
+            />
+            <Label
+                Text="0"
+                Style="{StaticResource PlayLabel}"
+                x:Name="GameCycleCount"
+                FontSize="40"
+                IsVisible="false"
+            />
+            <Label
+                Text=" "
+                Style="{StaticResource PlayLabel}"
+                FontSize="40"
+                IsVisible="true"
+            />
+        </HorizontalStackLayout>
+        <!-- Playing buttons -->
+        <Grid
+            HorizontalOptions="Fill"
+            Margin="20, 60, 20, 60">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- Column 1 -->
+            <VerticalStackLayout 
+                Grid.Column="0"
+                Spacing="40" 
+                Margin="0, 0, 20, 0">
+                
+                <Button 
+                    Clicked="GameButtonRed"
+                    x:Name="BtnRed"
+                    Style="{StaticResource BtnPlay}"
+                    Text=""
+                    BackgroundColor="#f74d4d"
+                    BorderColor="DarkRed"
+                    BorderWidth="0.25"
+                    >
+                    <Button.Shadow>
+                        <Shadow
+                            Brush="Red"
+                            Radius="5"/>
+                    </Button.Shadow>
+                </Button>
+                
+                <Button 
+                    Clicked="GameButtonOrange"
+                    x:Name="BtnOrange"
+                    Style="{StaticResource BtnPlay}"
+                    Text=""
+                    BackgroundColor="#fcbc32"
+                    BorderColor="DarkOrange"
+                    BorderWidth="0.25"
+                >
+                    <Button.Shadow>
+                        <Shadow
+                            Brush="Orange"
+                            Radius="5"/>
+                    </Button.Shadow>
+                </Button>
+            </VerticalStackLayout>
+
+            <!-- Column 2 -->
+            <VerticalStackLayout 
+                Grid.Column="1" 
+                Spacing="40" 
+                Margin="20, 0, 0, 0">
+                
+                <Button 
+                    Clicked="GameButtonBlue"
+                    x:Name="BtnBlue"
+                    Style="{StaticResource BtnPlay}"
+                    Text=""
+                    BackgroundColor="#2CB6F5"
+                    BorderColor="DarkBlue"
+                    BorderWidth="0.25"
+                >
+                    <Button.Shadow>
+                        <Shadow
+                            Brush="Blue"
+                            Radius="5"/>
+                    </Button.Shadow>
+                </Button>
+                <Button 
+                    Clicked="GameButtonGreen"
+                    x:Name="BtnGreen"
+                    Style="{StaticResource BtnPlay}"
+                    Text=""
+                    BackgroundColor="#51e637"
+                    BorderColor="DarkGreen"
+                    BorderWidth="0.25"
+                >
+                    <Button.Shadow>
+                        <Shadow
+                            Brush="Green"
+                            Radius="5"/>
+                    </Button.Shadow>
+                </Button>
+            </VerticalStackLayout>
+        </Grid>
+        <!-- Start button -->
+        <Button
+            Text="Start"
+            Clicked="OnBtnStartClicked"
+            x:Name="BtnStart"
+            
+            FontFamily="Jersey"
+            FontSize="80"
+            FontAttributes="Bold"
+            TextColor="Black"
+            />
+
+    </VerticalStackLayout>
+</ContentPage>

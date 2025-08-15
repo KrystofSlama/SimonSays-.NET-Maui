@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!-- MainPage Styles -->
+    <Style TargetType="Button" x:Key="BtnMainPage">
+        <!-- Text -->
+        <Setter Property="FontFamily" Value="Jersey"/>
+        <Setter Property="FontSize" Value="80"/>
+        <Setter Property="TextColor" Value="Black"/>
+        <Setter Property="Padding" Value="0, 0"/>
+        <!-- Frame -->
+        <Setter Property="BackgroundColor" Value="Transparent"/>
+        <Setter Property="MaximumWidthRequest" Value="200"/>
+        <Setter Property="BorderWidth" Value="0"/>
+        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="Shadow">
+            <Setter.Value>
+                <Shadow
+                    Brush="Black"
+                    Opacity="0"
+                    Radius="5"
+                    Offset="3, 3"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- Play Page Styles -->
+    <Style TargetType="Button" x:Key="BtnPlay">
+        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="HeightRequest" Value="150"/>
+        <Setter Property="HorizontalOptions" Value="Fill"/>
+        <Setter Property="Shadow">
+            <Setter.Value>
+                <Shadow
+                    Opacity="1"
+                    Offset="0, 0"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="Label" x:Key="PlayLabel">
+        <Setter Property="FontFamily" Value="Jersey"/>
+        <Setter Property="TextColor" Value="Black"/>
+    </Style>
+
+    <!-- Score Page Styles-->
+    <Style TargetType="Label" x:Key="ScoreLabel">
+        <Setter Property="FontFamily" Value="Jersey"/>
+        <Setter Property="TextColor" Value="Black"/>
+    </Style>
+</ResourceDictionary>

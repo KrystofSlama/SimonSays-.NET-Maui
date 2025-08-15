@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SimonSays.Views.MainPage">
+    
+    <VerticalStackLayout
+        VerticalOptions="Fill"
+        BackgroundColor="Beige"
+        Padding="20,00"
+        Spacing="30">
+        <!-- Title -->    
+        <Label
+            Text="Simon Says"
+            FontFamily="Astroz"
+            FontSize="90"
+            TextColor="Black"
+            HorizontalTextAlignment="Center"
+            Margin="0, 0, 0, 80"
+            />
+        <!-- Play Button -->
+        <Button
+            Style="{StaticResource BtnMainPage}"
+            Clicked="OnBtnPlayClicked"
+            Text="Play" 
+            />
+        <!-- Levels Button -->    
+        <Button
+            Style="{StaticResource BtnMainPage}"
+            Clicked="OnBtnScoreClicked"
+            Margin="0, -20"
+            Text="Score"
+            />
+        <!-- Score Button -->
+        <Button
+            Style="{StaticResource BtnMainPage}"
+            Clicked="OnBtnOptionsClicked"
+            Text="Options"
+            Margin="0, 0, 0, 200"
+            />
+            
+    </VerticalStackLayout>
+</ContentPage>
